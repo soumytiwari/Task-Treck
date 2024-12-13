@@ -4,18 +4,24 @@ import mongoose from 'mongoose';
 import { config } from 'dotenv'; // or import dotenv/config.js
 import dotenv from 'dotenv';
 import { port, mongoDBURL } from './config.js';
+import taskRoutes from './routes/task.js'
 
 const app = express()
+dotenv.config()
+
+// Middleware
 app.use(cors())         // enable CORS for all origins
 app.use(express.json())         // parse incoming req with JSON payloads.
 
-dotenv.config()
 
 // create http route
 app.get('/', (request, response) => {
     console.log(request)
     return response.status(234).send('Welcome!')
 })
+
+// Use task routes
+app.use('/tasks', taskRoutes)
 
 // connect database
 mongoose.connect(mongoDBURL).then(() => {
