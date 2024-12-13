@@ -3,11 +3,15 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import { config } from 'dotenv'; // or import dotenv/config.js
 import dotenv from 'dotenv';
-import { port, mongoDBURL } from './config.js';
+// import { port, mongoDBURL } from './config.js';
 import taskRoutes from './routes/task.js'
+
 
 const app = express()
 dotenv.config()
+
+const port = process.env.PORT || 3000
+const mongoDBURL = process.env.MONGO_DB_URL
 
 // Middleware
 app.use(cors())         // enable CORS for all origins
