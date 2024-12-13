@@ -7,9 +7,9 @@ import dotenv from 'dotenv';
 import taskRoutes from './routes/task.js'
 
 
-const app = express()
 dotenv.config()
 
+const app = express()
 const port = process.env.PORT || 3000
 const mongoDBURL = process.env.MONGO_DB_URL
 
