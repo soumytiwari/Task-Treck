@@ -22,6 +22,7 @@ const mongoDBURL = process.env.MONGO_DB_URL
 //     })
 // )                // specified use of 'cors'
 app.use(cors())         // enable CORS for all origins
+  
 app.use(express.json())         // parse incoming req with JSON payloads.
 
 
