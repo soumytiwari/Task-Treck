@@ -55,7 +55,8 @@ const Home = () => {
                     {task.user}
                   </td> */}
                   <td className='border border-slate-700 rounded-md text-center max-md:hidden'>
-                    {task.createdAt}
+                    {/* {task.createdAt} */}
+                    {new Date(task.createdAt).toString()}
                   </td>
                   <td className='border border-slate-700 rounded-md text-center max-md:hidden'>
                     {task.description}
