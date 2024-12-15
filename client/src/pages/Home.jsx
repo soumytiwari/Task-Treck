@@ -43,7 +43,7 @@ const Home = () => {
               </tr>
             </thead>
             <tbody>
-              {tasks.map((task, index) => {
+              {tasks.map((task, index) => (
                 <tr key={task._id} className='h-8'>
                   <td className='border border-slate-700 rounded-md text-center'>
                     {index + 1}
@@ -69,12 +69,12 @@ const Home = () => {
                         <AiOutlineEdit className='text-2xl text-yellow-600'/>
                       </Link>
                       <Link to={`/tasks/delete/${task._id}`}>
-                        <MdOutlineAddBox className='text-2xl text-re6-800'/>
+                        <MdOutlineAddBox className='text-2xl text-red-600'/>
                       </Link>
                     </div>
                   </td>
                 </tr>
-              })}
+              ))}
             </tbody>
           </table>
         )}
