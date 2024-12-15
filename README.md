@@ -81,7 +81,7 @@ cd Task-Treck
 ---
 
 ## Deployed Application
-- Visit the deployed application [here](https://your-deployment-link).
+- Visit the deployed application [here](https://task-treck.vercel.app/).
 
 ---
 
